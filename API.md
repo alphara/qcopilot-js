@@ -7,8 +7,7 @@ This developer's guide explainse how to access Qauntum Copilot API using program
 Go to [https://qc.vuics.com/keys](https://qc.vuics.com/keys) and create an API Key.
 Set the environment variables:
 ```bash
-# export QCOPILOT_API_URL=https://api.qc.vuics.com/v1
-export QCOPILOT_API_URL=http://localhost:6368/v1
+export QCOPILOT_API_URL=https://api.qc.vuics.com/v1
 export QCOPILOT_API_KEY=<YOUR_KEY>
 ```
 
