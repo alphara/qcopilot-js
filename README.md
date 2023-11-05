@@ -2,6 +2,8 @@
 
 The qcopilot-js is a command line tool for interacting with the [Quantum Copilot](https://qc.vuics.com) API.
 
+You can read the [API.md](./API.md) document to learn more about the Quantum Copilot API.
+
 ## Install
 
 To install dependencies:
