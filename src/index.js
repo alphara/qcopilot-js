@@ -31,9 +31,19 @@ Arguments:
   -v - verbose mode
 
 Devices:
-  - 'simulator_statevector' (by default)
-  - 'ibmq_qasm_simulator'
-  - 'simulator_mps'
+  Quantum Simulators:
+    - 'simulator_statevector' (by default)
+    - 'ibmq_qasm_simulator'
+    - 'simulator_mps'
+  Real Quantum Hardware:
+    - 'ibm_perth'
+    - 'ibm_nairobi'
+    - 'ibm_lagos'
+    - 'ibmq_jakarta'
+    - 'ibmq_manila'
+    - 'ibmq_quito'
+    - 'ibmq_belem'
+    - 'ibmq_lima'
 
 Examples:
   ${appName} ask --prompt='Code a quantum cirquit on OpenQASM 2 that implements entanglement'
@@ -74,7 +84,7 @@ const ask = async ({ accessToken, prompt }) => {
   let res = null
   try {
     res = await axios.post(`${apiUrl}/ask/api`, {
-      prompt: 'Code a quantum cirquit on OpenQASM 2 that implements entanglement',
+      prompt,
     }, {
       headers: {
         'Authorization': `Bearer ${accessToken}`,
@@ -111,17 +121,18 @@ const main = async () => {
   try {
     let accessToken = null
     const v = argv['v']
+    const commands = argv['_']
     const prompt = argv['prompt'] || ''
     const code = argv['code'] || ''
     const device = argv['device'] || 'simulator_statevector'
 
-    v && console.log('argv:', argv)
+    v && console.log('Arguments:', argv)
     v && console.log('Prompt:', prompt)
     v && console.log('Code:')
-    v && console.log(code)
+    v && code && console.log(code)
     v && console.log('Device:', device)
 
-    if (argv['_'].includes('ask')) {
+    if (commands.includes('ask')) {
       v && console.log('Ask')
       if (!accessToken) { accessToken = await auth() }
       if (!prompt) { return console.error('Error: No prompt specified.') }
@@ -132,7 +143,7 @@ const main = async () => {
       v && console.log('Reply:')
       console.log(reply)
 
-    } else if (argv['_'].includes('run')) {
+    } else if (commands.includes('run')) {
       v && console.log('Run')
       if (!accessToken) { accessToken = await auth() }
       if (!code) { return console.error('Error: No code specified.') }
@@ -146,7 +157,7 @@ const main = async () => {
       v && console.log('Output:')
       console.log(output)
 
-    } else if (argv['_'].includes('code-run')) {
+    } else if (commands.includes('code-run')) {
       v && console.log('Code-run')
       if (!accessToken) { accessToken = await auth() }
       if (!prompt) { return console.error('Error: No prompt specified.') }
@@ -169,7 +180,7 @@ const main = async () => {
       v && console.log('Output:')
       console.log(output)
 
-    } else if (argv['_'].includes('help')) {
+    } else if (commands.includes('help')) {
       console.log(help)
 
     } else {
