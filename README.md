@@ -13,7 +13,7 @@ npm i
 
 ## Setup
 
-Create an API key on [Quantum Copilot](https://api.qc.vuics.com/keys).
+Create an API key on [Quantum Copilot](https://qc.vuics.com/keys).
 Create `.env` file with the following content:
 ```
 QCOPILOT_API_URL=https://api.qc.vuics.com/v1
