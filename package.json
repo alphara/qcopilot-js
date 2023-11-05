@@ -1,0 +1,26 @@
+{
+  "name": "qcopilot-js",
+  "version": "1.0.0",
+  "description": "Interact with the Quantum Copilot API",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "quantum",
+    "copilot",
+    "API",
+    "command line interface",
+    "CLI"
+  ],
+  "author": "Artem Arakcheev <artarakcheev@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "lodash": "^4.17.21",
+    "minimist": "^1.2.8"
+  }
+}
