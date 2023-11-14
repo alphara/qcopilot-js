@@ -109,3 +109,9 @@ c: 2/═══════════╩══╩═
   "00": 1975
 }
 ```
+
+## Use in Jupyter Notebook
+
+It is possible to use the qcopilot-js directly from your Jupyter Notebooks.
+See the [notebook-example.ipynb](./notebook-example.ipynb) for more information.
+
