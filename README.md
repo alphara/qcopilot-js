@@ -6,7 +6,12 @@ You can read the [API.md](./API.md) document to learn more about the Quantum Cop
 
 ## Install
 
-To install dependencies:
+You can install the package from NPM globally:
+```bash
+npm i -g @vuics/qcopilot-js
+```
+
+Or install locally from the repo:
 ```bash
 npm i
 ```

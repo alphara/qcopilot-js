@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import axios from 'axios'
 import { config } from 'dotenv'
 import minimist from 'minimist'

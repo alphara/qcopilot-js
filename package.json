@@ -1,12 +1,19 @@
 {
-  "name": "qcopilot-js",
-  "version": "1.0.0",
+  "name": "@vuics/qcopilot-js",
+  "version": "1.0.3",
   "description": "Interact with the Quantum Copilot API",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "node src/index.js",
+    "pub": "npm publish --access public",
+    "inst": "npm i -g @vuics/qcopilot-js",
+    "uninst": "npm un -g @vuics/qcopilot-js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "qcopilot-js": "src/index.js",
+    "qc": "src/index.js"
   },
   "keywords": [
     "quantum",
