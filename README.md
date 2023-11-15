@@ -29,8 +29,8 @@ QCOPILOT_API_KEY=<GET_API_KEY_ON_QUANTUM_COPILOT>
 
 To run:
 ```bash
-npm start
-npm start -- help
+qc
+qc help
 ```
 
 ## Usage Examples
@@ -39,7 +39,7 @@ npm start -- help
 
 Ask a question and get an answer.
 ```bash
-npm start -- ask --prompt='What is a qubit?'
+qc ask --prompt='What is a qubit?'
 ```
 Example output:
 ```
@@ -56,7 +56,7 @@ Qubits form the foundation of quantum computing and hold the potential to perfor
 
 Run a code on a quantum simulator or a real quantum hardware.
 ```bash
-npm start -- run --code='OPENQASM 2.0; include "qelib1.inc"; qreg q[2]; creg c[2]; h q[0]; cx q[0], q[1]; measure q -> c;' --device='simulator_statevector'
+qc run --code='OPENQASM 2.0; include "qelib1.inc"; qreg q[2]; creg c[2]; h q[0]; cx q[0], q[1]; measure q -> c;' --device='simulator_statevector'
 ```
 Example output:
 ```
@@ -75,14 +75,14 @@ c: 2/═══════════╩══╩═
 
 By default, it runs code on a quantum simulator but you can set real quantum harware, for instance `--device='ibmq_quito'`.
 ```bash
-npm start -- run --code='OPENQASM 2.0; include "qelib1.inc"; qreg q[2]; creg c[2]; h q[0]; cx q[0], q[1]; measure q -> c;' --device='ibmq_quito'
+qc run --code='OPENQASM 2.0; include "qelib1.inc"; qreg q[2]; creg c[2]; h q[0]; cx q[0], q[1]; measure q -> c;' --device='ibmq_quito'
 ```
 
 ### Code-run
 
 Generate code and run it on a quantum simulator.
 ```bash
-npm start -- code-run --prompt='Write me a code example of quantum cirquit algorithm on OpenQASM 2'
+qc code-run --prompt='Write me a code example of quantum cirquit algorithm on OpenQASM 2'
 ```
 Example output:
 ```

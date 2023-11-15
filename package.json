@@ -1,7 +1,7 @@
 {
   "name": "@vuics/qcopilot-js",
-  "version": "1.0.3",
-  "description": "Interact with the Quantum Copilot API",
+  "version": "1.0.10",
+  "description": "A Command Line Interface (CLI) tool to interact with the Quantum Copilot over API",
   "main": "index.js",
   "type": "module",
   "scripts": {

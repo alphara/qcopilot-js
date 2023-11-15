@@ -3,6 +3,7 @@
 import axios from 'axios'
 import { config } from 'dotenv'
 import minimist from 'minimist'
+import { basename } from 'path'
 import lodash from 'lodash'
 const { has } = lodash
 
@@ -16,10 +17,10 @@ if (result.error) {
 }
 
 const apiUrl = process.env.QCOPILOT_API_URL ||
-  'http://localhost:6368/v1'
-  // 'https://api.qc.vuics.com/v1'
+  'https://api.qc.vuics.com/v1'
+  // 'http://localhost:6368/v1'
 const apiKey = process.env.QCOPILOT_API_KEY || '<YOUR_KEY>'
-const appName = process.env.QCOPILOT_APP_NAME || 'npm start --'
+const appName = process.env.QCOPILOT_APP_NAME || basename(process.argv[1]) || 'qc'
 
 const help = `
 ${appName} <command> [arguments]
