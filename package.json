@@ -1,6 +1,6 @@
 {
   "name": "@vuics/qcopilot-js",
-  "version": "1.0.10",
+  "version": "1.0.12",
   "description": "A Command Line Interface (CLI) tool to interact with the Quantum Copilot over API",
   "main": "index.js",
   "type": "module",
@@ -14,6 +14,10 @@
   "bin": {
     "qcopilot-js": "src/index.js",
     "qc": "src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alphara/qcopilot-js"
   },
   "keywords": [
     "quantum",
