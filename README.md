@@ -120,3 +120,5 @@ c: 2/═══════════╩══╩═
 It is possible to use the qcopilot-js directly from your Jupyter Notebooks.
 See the [notebook-example.ipynb](./notebook-example.ipynb) for more information.
 
+![Screenshot of Jupyther Notebook Example](./notebook-screenshot.png)
+
